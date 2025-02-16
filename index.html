@@ -145,7 +145,6 @@
 
         #play-button {
             padding: 3%;
-            color: red;
         }
 
         #quiz-img {
@@ -155,7 +154,7 @@
         #quiz-ans {
             margin-top: 5%;
             box-sizing: border-box;
-            width: 95%;
+            width: 90%;
             padding: 0.3em;
             transition: 0.3s;
             border: 1px solid #1b2538;
@@ -175,6 +174,11 @@
             text-decoration: none;
             font-size: 1em;
         }
+
+        .a-red {
+            padding: 3%;
+            color: red;
+        }
     </style>
 
     <script>
@@ -188,6 +192,12 @@
                 alert("残念")
             }
         })
+
+        let anchorToOmikuji = document.getElementById("play-button")
+        setInterval(() => {
+            anchorToOmikuji.classList.toggle("a-red")
+        }, 500)
+
 
     </script>
 </body>

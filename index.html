@@ -184,9 +184,10 @@
     <script>
 
         let quizButton = document.getElementById("quiz-button")
+        const ANSWER = ["虚無虚無プリン", "キョムキョムプリン", "きょむきょむプリン", "虚無虚無ぷりん"]
         quizButton.addEventListener("click", () => {
-            quizAns = document.getElementById("quiz-ans")
-            if (quizAns == "虚無虚無プリン" || "キョムキョムプリン" || "きょむきょむプリン" || "虚無虚無ぷりん") {
+            quizAns = document.getElementById("quiz-ans").value
+            if (ANSWER.includes(quizAns)) {
                 alert("正解！")
             } else {
                 alert("残念")

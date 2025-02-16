@@ -15,8 +15,8 @@
 <body>
     <header>
         <h1 class="site-title">
-            <div id="header-title">
-                <a href="#mv-container">Home</a>
+            <div>
+                <a href="#mv-container" id="header-title">Home</a>
             </div>
         </h1>
         <nav>
@@ -115,9 +115,8 @@
             display: block;
             width: 100%;
             max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
         }
+
 
         h2 {
             text-align: center;
@@ -132,12 +131,15 @@
 
 
         .nav-menu {
-            margin-left: 25px;
+            margin-left: 20px;
+        }
+
+        #header-title {
+            font-size: 0.8em;
         }
 
 
         .site-title {
-            padding: 8px 0;
             margin: 0;
         }
 
@@ -150,7 +152,8 @@
 
 
         #play-button {
-            padding: 3%;
+            padding: 3% 0 3% 0;
+            display: inline-block;
         }
 
         #quiz-img {
@@ -188,6 +191,18 @@
         .a-red {
             padding: 3%;
             color: red;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
     </style>
 

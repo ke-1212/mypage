@@ -15,11 +15,9 @@
 <body>
     <header>
         <h1 class="site-title">
-            <a href="./index.html" target="_blank" rel="noopener noreferrer">
-                <div id="header-title">
-                    <p>けー</p>
-                </div>
-            </a>
+            <div id="header-title">
+                <a href="#mv-container">Home</a>
+            </div>
         </h1>
         <nav>
             <ul>
@@ -29,7 +27,7 @@
             </ul>
         </nav>
     </header>
-    <div class="main-container">
+    <div class="main-container" id="mv-container">
         <img src="./static/mv.jpg" alt="" id="mv">
     </div>
 
@@ -114,9 +112,11 @@
         }
 
         img {
+            display: block;
             width: 100%;
-            vertical-align: bottom;
             max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         h2 {
@@ -127,6 +127,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            margin: 10px;
         }
 
 
@@ -147,9 +148,6 @@
             border-bottom: solid 1px #383e45;
         }
 
-        .main-content {
-            margin-left: 10%;
-        }
 
         #play-button {
             padding: 3%;
@@ -168,6 +166,10 @@
             border: 1px solid #1b2538;
             border-radius: 4px;
             outline: none;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
         }
 
         #quiz-button {

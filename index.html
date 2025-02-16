@@ -30,7 +30,7 @@
         </nav>
     </header>
     <div class="main-container">
-        <img src="./mv.jpg" alt="" id="mv">
+        <img src="./static/mv.jpg" alt="" id="mv">
     </div>
 
     <section id="profile">
@@ -61,7 +61,7 @@
 
         <div class="main-content">
             <h2>次の画像は何？</h2>
-            <img src="./quiz.png" alt="" id="quiz-img">
+            <img src="./static/quiz.png" alt="" id="quiz-img">
             <input type="text" name="" id="quiz-ans" placeholder="回答欄">
             <button id="quiz-button">回答</button>
         </div>
@@ -76,6 +76,13 @@
             margin-left: auto;
             margin-right: auto;
             font-family: "Noto Sans JP", serif;
+            font-size: 20px;
+        }
+
+        @media screen and (max-width: 360px) {
+            body {
+                font-size: 12px;
+            }
         }
 
         p {

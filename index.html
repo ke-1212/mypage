@@ -4,13 +4,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Noto+Sans+JP:wght@100..900&family=Yuji+Mai&display=swap"
+        rel="stylesheet">
     <title>マイページ</title>
 </head>
 
 <body>
+    <header>
+        <h1 class="site-title">
+            <a href="./index.html" target="_blank" rel="noopener noreferrer">
+                <div id="header-title">
+                    <p>けー</p>
+                </div>
+            </a>
+        </h1>
+        <nav>
+            <ul>
+                <li class="nav-menu" id="nav-about"><a href="#profile">Profile</a></li>
+                <li class="nav-menu" id="nav-about"><a href="#project">Project</a></li>
+                <li class="nav-menu" id="nav-about"><a href="#quiz">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main-container">
+        <img src="./mv.jpg" alt="" id="mv">
+    </div>
 
-    <p>マイホームページです。</p>
+    <section id="profile">
+        <h2 class="section-title">Profile</h2>
 
+        <div class="main-content">
+            <h3>けー</h3>
+            <p>ハードナッツ10期生<br>開発初心者</p>
+        </div>
+    </section>
+
+    <section id="project">
+        <h2 class="section-title">Project</h2>
+
+        <div class="main-content">
+            <h3>秋めぐる君と一葉</h3>
+            <p>京都大学文化祭である「NF」にて開催。システムを一部担当。</p>
+
+            <h3>ナッツおみくじ</h3>
+            <p>2025年1月にリリース</p>
+            <a href="https://omikuji.hardnuts.fun" target="_blank" rel="noopener noreferrer"
+                id="play-button">ナッツおみくじを遊ぶ</a>
+        </div>
+    </section>
+
+    <section id="quiz">
+        <h2 class="section-title">Quiz</h2>
+
+        <div class="main-content">
+            <h2>次の画像は何？</h2>
+            <img src="./quiz.png" alt="" id="quiz-img">
+            <input type="text" name="" id="quiz-ans" placeholder="回答欄">
+            <button id="quiz-button">回答</button>
+        </div>
+    </section>
+
+    <style>
+        body {
+            width: 100%;
+            padding: 0%;
+            margin: 0%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: "Noto Sans JP", serif;
+        }
+
+        p {
+            padding: 0%;
+            margin: 0%;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        div {
+            vertical-align: bottom;
+        }
+
+        header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        img {
+            width: 100%;
+            vertical-align: bottom;
+            max-width: 600px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+
+        .nav-menu {
+            margin-left: 25px;
+        }
+
+
+        .site-title {
+            padding: 8px 0;
+            margin: 0;
+        }
+
+        .section-title {
+            display: inline-block;
+            font-size: 2rem;
+            margin-bottom: 50px;
+            border-bottom: solid 1px #383e45;
+        }
+
+        .main-content {
+            margin-left: 10%;
+        }
+
+        #play-button {
+            padding: 3%;
+            color: red;
+        }
+
+        #quiz-img {
+            width: 90%;
+        }
+
+        #quiz-ans {
+            margin-top: 5%;
+            box-sizing: border-box;
+            width: 95%;
+            padding: 0.3em;
+            transition: 0.3s;
+            border: 1px solid #1b2538;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        #quiz-button {
+            display: block;
+            margin-top: 5%;
+            margin-bottom: 10%;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: grey;
+            color: #fff;
+            padding: 10px 30px;
+            text-decoration: none;
+            font-size: 1em;
+        }
+    </style>
+
+    <script>
+
+        let quizButton = document.getElementById("quiz-button")
+        quizButton.addEventListener("click", () => {
+            quizAns = document.getElementById("quiz-ans")
+            if (quizAns == "虚無虚無プリン" || "キョムキョムプリン" || "きょむきょむプリン" || "虚無虚無ぷりん") {
+                alert("正解！")
+            } else {
+                alert("残念")
+            }
+        })
+
+    </script>
 </body>
+
 
 </html>

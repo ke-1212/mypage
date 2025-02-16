@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正誤判定</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="./ex_quiz.png" alt="">
+    </div>
+    <div class="container">
+        <input type="text" name="" id="ans-input">
+    </div>
+    <div class="container">
+        <button type="button" id="submit-button">回答ボタン</button>
+    </div>
+
+    <style>
+        body {
+            background-color: darksalmon;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        #ans-input {
+            width: 10%;
+            border: 1px solid black;
+            margin: 0.5rem 0;
+            padding: 0.5rem 1rem;
+            border-radius: 0.3rem;
+            background: darken(#f9f9f9, 10%);
+            color: darken(#f9f9f9, 50%);
+        }
+
+        #submit-button {
+            background: #eee;
+            border-radius: 10px;
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 0 auto;
+            max-width: 250px;
+            padding: 10px 25px;
+            font-family: "Noto Sans Japanese";
+            color: #333333;
+            line-height: 1.8;
+            text-decoration: none;
+            transition: 0.3s ease-in-out;
+            font-weight: 500;
+        }
+    </style>
+    <script>
+        let submitButton = document.getElementById("submit-button")
+        submitButton.addEventListener("click", () => {
+            ansInput = document.getElementById("ans-input").value
+            if (ansInput == "ボボボーボ・ボーボボ") {
+            } else {
+                alert("残念！")
+            }
+        })
+    </script>
+</body>
+
+</html>
